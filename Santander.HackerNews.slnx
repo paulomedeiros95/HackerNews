@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="Santander.HackerNews.Api/Santander.HackerNews.Api.csproj" />
+    <Project Path="Santander.HackerNews.Application/Santander.HackerNews.Application.csproj" />
+    <Project Path="Santander.HackerNews.Domain/Santander.HackerNews.Domain.csproj" />
+    <Project Path="Santander.HackerNews.Infrastructure/Santander.HackerNews.Infrastructure.csproj" />
+  </Folder>
+</Solution>
