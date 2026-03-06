@@ -1,31 +1,16 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Santander.HackerNews.Domain.Entities
-{
-    /// <summary>
-    /// Represents the exact JSON structure returned by the Hacker News API.
-    /// </summary>
-    public class HackerNewsStory
-    {
-        [JsonPropertyName("id")]
-        public int Id { get; set; }
+namespace Santander.HackerNews.Domain.Entities;
 
-        [JsonPropertyName("title")]
-        public string Title { get; set; } = string.Empty;
-
-        [JsonPropertyName("url")]
-        public string Url { get; set; } = string.Empty;
-
-        [JsonPropertyName("by")]
-        public string By { get; set; } = string.Empty;
-
-        [JsonPropertyName("time")]
-        public long Time { get; set; }
-
-        [JsonPropertyName("score")]
-        public int Score { get; set; }
-
-        [JsonPropertyName("descendants")]
-        public int Descendants { get; set; }
-    }
-}
+/// <summary>
+/// Immutable record representing the Hacker News API response.
+/// </summary>
+public record HackerNewsStory(
+    [property: JsonPropertyName("id")] int Id,
+    [property: JsonPropertyName("title")] string Title,
+    [property: JsonPropertyName("url")] string Url,
+    [property: JsonPropertyName("by")] string By,
+    [property: JsonPropertyName("time")] long Time,
+    [property: JsonPropertyName("score")] int Score,
+    [property: JsonPropertyName("descendants")] int Descendants
+);

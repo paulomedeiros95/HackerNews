@@ -1,28 +1,15 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Santander.HackerNews.Domain.Dtos
-{
-    /// <summary>
-    /// Represents the required output format.
-    /// </summary>
-    public class StoryDto
-    {
-        [JsonPropertyName("title")]
-        public string Title { get; set; } = string.Empty;
+namespace Santander.HackerNews.Domain.Dtos;
 
-        [JsonPropertyName("uri")]
-        public string Uri { get; set; } = string.Empty;
-
-        [JsonPropertyName("postedBy")]
-        public string PostedBy { get; set; } = string.Empty;
-
-        [JsonPropertyName("time")]
-        public string Time { get; set; } = string.Empty;
-
-        [JsonPropertyName("score")]
-        public int Score { get; set; }
-
-        [JsonPropertyName("commentCount")]
-        public int CommentCount { get; set; }
-    }
-}
+/// <summary>
+/// Immutable DTO for the API output.
+/// </summary>
+public record StoryDto(
+    [property: JsonPropertyName("title")] string Title,
+    [property: JsonPropertyName("uri")] string Uri,
+    [property: JsonPropertyName("postedBy")] string PostedBy,
+    [property: JsonPropertyName("time")] string Time,
+    [property: JsonPropertyName("score")] int Score,
+    [property: JsonPropertyName("commentCount")] int CommentCount
+);
