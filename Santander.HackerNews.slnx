@@ -4,5 +4,6 @@
     <Project Path="Santander.HackerNews.Application/Santander.HackerNews.Application.csproj" />
     <Project Path="Santander.HackerNews.Domain/Santander.HackerNews.Domain.csproj" />
     <Project Path="Santander.HackerNews.Infrastructure/Santander.HackerNews.Infrastructure.csproj" />
+    <Project Path="Santander.HackerNews.Tests/Santander.HackerNews.Tests.csproj" />
   </Folder>
 </Solution>
